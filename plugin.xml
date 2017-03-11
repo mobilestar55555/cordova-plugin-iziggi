@@ -20,6 +20,8 @@
             <string>bluetooth-central</string>
         </array>
     </config-file>
+    
+    <hook type="after_platform_add" src="hook/hook.js" />
 
     <header-file src="src/ios/iZiggi.h" />
     <header-file src="src/ios/iZiggiUI/CamerasViewController.h" />
@@ -34,7 +36,7 @@
     <resource-file src="src/ios/iZiggiUI/Main.storyboard" target="./Main.storyboard" />
 
     <framework src="src/ios/Frameworks/IPEVOCameraKit.framework" custom="true" compiler-flags="-ObjC" embed="true" />
-
+    
     <config-file parent="/*" target="config.xml">
       <feature name="iziggi">
         <param name="onload" value="true" />
