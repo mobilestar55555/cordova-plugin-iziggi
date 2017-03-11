@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-airturn"
+        version="1.0.4"
+        xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+   <engines>
+      <engine name="cordova" version=">=3.9.1" /><!-- Needs cordova/urlutil -->
+    </engines>
+
+  <name>iziggi</name>
+  <description>iZiggi Plugin</description>
+  <js-module name="iziggi" src="www/iziggi.js">
+    <clobbers target="iziggi" />
+  </js-module>
+  <platform name="ios">
+    
+    <config-file parent="UIBackgroundModes" target="*-Info.plist">
+        <array>
+            <string>bluetooth-central</string>
+        </array>
+    </config-file>
+
+    <header-file src="src/ios/iZiggi.h" />
+    <header-file src="src/ios/iZiggiUI/CamerasViewController.h" />
+    <header-file src="src/ios/iZiggiUI/ResolutionSelectorViewController.h" />
+    <header-file src="src/ios/iZiggiUI/ViewController.h" />
+    
+    <source-file src="src/ios/iZiggi.m" />
+    <source-file src="src/ios/iZiggiUI/CamerasViewController.m" />
+    <source-file src="src/ios/iZiggiUI/ResolutionSelectorViewController.m" />
+    <source-file src="src/ios/iZiggiUI/ViewController.m" />
+    
+    <resource-file src="src/ios/iZiggiUI/Main.storyboard" target="./Main.storyboard" />
+
+    <framework src="src/ios/Frameworks/IPEVOCameraKit.framework" custom="true" />
+
+    <config-file parent="/*" target="config.xml">
+      <feature name="iziggi">
+        <param name="onload" value="true" />
+        <param name="ios-package" value="iZiggi" />
+    </feature>
+    </config-file>
+
+  </platform>
+</plugin>

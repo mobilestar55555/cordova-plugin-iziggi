@@ -1,0 +1,31 @@
+{
+  "name": "cordova-plugin-iziggi”,
+  "version": “1.0.0”,
+  "description": “iZiggi HD Plugin“,
+  "cordova": {
+    "id": "cordova-plugin-iziggi”,
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mobilestar55555/cordova-plugin-iziggi.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.9.1"
+    }
+  ],
+  "author": “mobilestar55555”,
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mobilestar55555/cordova-plugin-iziggi/issues"
+  },
+  "homepage": "https://github.com/mobilestar55555/cordova-plugin-iziggi#readme"
+}

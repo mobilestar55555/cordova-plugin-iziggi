@@ -1,0 +1,6 @@
+framework module IPEVOCameraKit {
+  umbrella header "IPEVOCameraKit.h"
+
+  export *
+  module * { export * }
+}
