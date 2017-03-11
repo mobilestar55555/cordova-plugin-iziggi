@@ -23,7 +23,7 @@ $ cordova plugin add https://github.com/mobilestar55555/cordova-plugin-iziggi.gi
 USAGE:
 ======
 
-## From Native to Javascript
+## From Native to Javascript mobilestar55555
 
 ### Javascript
 
