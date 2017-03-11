@@ -33,7 +33,7 @@
     
     <resource-file src="src/ios/iZiggiUI/Main.storyboard" target="./Main.storyboard" />
 
-    <framework src="src/ios/Frameworks/IPEVOCameraKit.framework" custom="true" compiler-flags="-ObjC" />
+    <framework src="src/ios/Frameworks/IPEVOCameraKit.framework" custom="true" compiler-flags="-ObjC" embed="true" />
 
     <config-file parent="/*" target="config.xml">
       <feature name="iziggi">
