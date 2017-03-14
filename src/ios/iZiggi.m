@@ -221,22 +221,27 @@ static NSString* toBase64(NSData* data) {
     
     [self.commandDelegate evalJs:func];
 }
-    
+
 #pragma mark - ICCaptureSteramProxyDelegate
 - (void)cameraStreamProxy:(ICCameraStreamProxy *)cameraStreamProxy didReceiveFrame:(CIImage *)image fromCamera:(ICCamera *)camera
 {
     __block NSData* data = nil;
     __typeof(self) __weak weakSelf = self;
-
+    //
     dispatch_async(dispatch_get_main_queue(), ^{
         //self.imageView.image = [UIImage imageWithCIImage:image];
-        data = UIImageJPEGRepresentation([UIImage imageWithCIImage:image], 0.8);
+        CIContext *context = [CIContext contextWithOptions:nil];
+        UIImage * returnImage;
+        CGImageRef processedCGImage = [context createCGImage:image fromRect:[image extent]];
+        returnImage = [UIImage imageWithCGImage:processedCGImage];
+        CGImageRelease(processedCGImage);
+        data = UIImageJPEGRepresentation(returnImage, 0.8);
         __typeof(self) __strong strongSelf = weakSelf;
         [strongSelf fireEvent:self.eventName data:toBase64(data)];
-  
+        
     });
 }
-    
+
 #pragma mark - ICCameraViewControllerDelegate
 - (void) imagePickerController:(ICImagePickerController *)imagePickerController didFinishPickingImage:(UIImage *)image
 {
