@@ -17,7 +17,7 @@ $ cordova plugin add https://github.com/mobilestar55555/cordova-plugin-iziggi.gi
 ```
 
 ### Add Embedded IPEVOCameraKit.framework in Xcode
-![](https://www.dropbox.com/s/mujiepzxbzvbixx/Embedded%20IPEVOCameraKit%20Framework.PNG?dl=0)
+Please check Embedded IPEVOCameraKit Framework.PNG
 
 USAGE:
 ======
