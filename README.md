@@ -19,6 +19,8 @@ $ cordova platform add ios
 $ cordova plugin add https://github.com/mobilestar55555/cordova-plugin-iziggi.git
 ```
 
+### Add Embedded IPEVOCameraKit.framework in Xcode
+![](https://www.dropbox.com/home?preview=Embedded+IPEVOCameraKit+Framework.PNG)
 
 USAGE:
 ======
