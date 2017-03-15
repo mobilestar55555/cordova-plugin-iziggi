@@ -6,9 +6,6 @@ Cordova Plugin For iZiggi HD Device
 IOS
 ===
 
-> Providing bridge to **[NotificationCenter](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSNotificationCenter_Class/index.html#//apple_ref/occ/instm/NSNotificationCenter/addObserverForName%3aobject%3aqueue%3ausingBlock%3a)**
-
-
 INSTALL
 ========
 
@@ -20,7 +17,7 @@ $ cordova plugin add https://github.com/mobilestar55555/cordova-plugin-iziggi.gi
 ```
 
 ### Add Embedded IPEVOCameraKit.framework in Xcode
-![](https://www.dropbox.com/home?preview=Embedded+IPEVOCameraKit+Framework.PNG)
+![](https://www.dropbox.com/s/mujiepzxbzvbixx/Embedded%20IPEVOCameraKit%20Framework.PNG?dl=0)
 
 USAGE:
 ======
