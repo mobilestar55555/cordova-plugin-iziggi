@@ -25,7 +25,9 @@
 - (void)init_iZiggi:(CDVInvokedUrlCommand*)command;
 - (void)getCameraList:(CDVInvokedUrlCommand*)command;
 - (void)selectCameraByIndex:(CDVInvokedUrlCommand*)command;
-    
+
+- (void)removeCamera:(CDVInvokedUrlCommand*)command;
+
 - (void)getResolutions:(CDVInvokedUrlCommand*)command;
 - (void)selectResolution:(CDVInvokedUrlCommand*)command;
     

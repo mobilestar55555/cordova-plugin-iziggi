@@ -142,6 +142,16 @@ static NSString* toBase64(NSData* data) {
     }
 }
 
+- (void)removeCamera:(CDVInvokedUrlCommand*)command
+{
+    if(self.camera)
+        [[ICCameraStreamProxy sharedProxy] removeStreamObserver:self forCamera:self.camera];
+    self.camera = nil;
+    
+    CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+}
+
 - (void)getResolutions:(CDVInvokedUrlCommand*)command
 {
     CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsArray:self.resolutions];
