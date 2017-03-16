@@ -223,6 +223,14 @@ var app = {
             });
         });
 
+        remove.addEventListener('click', function() {
+            window.iziggi.removeCamera(function(){
+                alert("removed camera");
+            },
+            function errorHandler(err){
+                console.log(err);
+            });
+        });
     },
 
     // Update DOM on a Received Event
