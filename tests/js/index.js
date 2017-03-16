@@ -4,7 +4,7 @@
  * distributed with this work for additional information
  * regarding copyright ownership.  The ASF licenses this file
  * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
+ * "License"); you may not use this file except in compliance https://i.diawi.com/gc87tE
  * with the License.  You may obtain a copy of the License at
  *
  * http://www.apache.org/licenses/LICENSE-2.0
@@ -31,7 +31,7 @@ var app = {
             alert("init iziggi success");
         },
         function errorHandler(err){
-        console.log(err);
+            console.log(err);
         });
 
         var initiZiggi = document.getElementById('initiZiggi');
@@ -48,6 +48,7 @@ var app = {
 
         var pick = document.getElementById('pick');
         var focus = document.getElementById('focus');
+        var remove = document.getElementById('remove');
 
         selectCameraByIndex.disabled = true;
         getResolutions.disabled = true;
@@ -60,6 +61,7 @@ var app = {
 
         pick.disabled = true;
         focus.disabled = true;
+        remove.disabled = true;
 
         getCameras.addEventListener('click', function() {
             window.iziggi.getCameraList(function(data){
@@ -90,6 +92,8 @@ var app = {
 
                 pick.disabled = false;
                 focus.disabled = false;
+                remove.disabled = false;
+
             });
         });
         
@@ -193,6 +197,16 @@ var app = {
                 console.log(err);
             });
         });
+        
+        remove.addEventListener('click', function() {
+            window.iziggi.removeCamera(function(){
+                alert("removed camera");
+            },
+            function errorHandler(err){
+                console.log(err);
+            });
+        });
+
 
     },
 

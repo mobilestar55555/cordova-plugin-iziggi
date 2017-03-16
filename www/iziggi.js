@@ -1,3 +1,4 @@
+cordova.define("cordova-plugin-iziggi.iziggi", function(require, exports, module) {
 var exec = require('cordova/exec');
 var channel = require('cordova/channel');
 
@@ -64,6 +65,11 @@ module.exports = {
                    
     focus: function (success, error) {
         exec(success, error, "iZiggi", "focus", null);
-    }
-        
-};
+    },
+    
+   removeCamera: function (success, error) {
+       exec(success, error, "iZiggi", "removeCamera", null);
+   },
+   
+    };
+});
